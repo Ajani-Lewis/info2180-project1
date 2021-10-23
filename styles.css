@@ -8,4 +8,93 @@ body {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+
+    display: grid;
+    grid-template-rows: auto auto auto auto auto auto auto;
+    grid-template-areas:
+    "header"
+    "live-section"
+    "learn-section"
+    "test-section" 
+    "story-section"
+    "news-section"
+    "footer"
+    ;
+}
+
+/*
+|||||||||||*********WEBSITE HEADER*********|||||||||||
+*/
+
+header{
+    grid-area: header;
+    background-color: aqua;
+
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    
+}
+
+header .container h1{
+    flex: 3;
+    font-size: initial; 
+}
+
+ul{
+    list-style-type: none;
+    flex: 1;
+
+}
+
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    text-align: right;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/*
+|||||||||||*********LIVE SECTION*********|||||||||||
+*/
+
+.overview-hero{
+    grid-area: live-section;
+    background-color: chocolate;
+}
+
+
+
+
+
+.learn-about{
+    grid-area: learn-section;
+    background-color: brown;
+}
+
+.testing{
+    grid-area: test-section;
+    background-color: chartreuse;
+}
+
+.stories{
+    grid-area: story-section;
+    background-color: cornflowerblue;
+}
+
+.newsletter{
+    grid-area: news-section;
+    background-color: darkmagenta;
+}
+
+footer{
+    grid-area: footer;
+    background-color: deeppink;
 }
