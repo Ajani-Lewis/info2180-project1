@@ -2,8 +2,9 @@ window.onload = function(){
     let button = document.getElementsByTagName("form")[0].getElementsByTagName("button")[0];
     let message = document.getElementsByClassName("message")[0];
     let email = document.getElementById("email");
-
-    console.log(email);
+    let footer = document.getElementsByTagName("footer")[0].getElementsByClassName("container")[0].getElementsByTagName("p")[0]
+    
+    footer.innerHTML = "Copyright 2020, Ajani Lewis"
 
     button.addEventListener("click", (e) => {
         e.preventDefault();
