@@ -1,7 +1,11 @@
 /* Add your CSS to this file */
 body {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, 
+    "Noto Sans", sans-serif;
+
+
 }
 
 .container {
@@ -22,13 +26,17 @@ body {
     ;
 }
 
+a{
+    text-decoration: none;
+}
+
 /*
-|||||||||||*********WEBSITE HEADER*********|||||||||||
+|||||||||||*********WEBPAGE HEADER*********|||||||||||
 */
 
 header{
     grid-area: header;
-    background-color: aqua;
+    background-color: white;
 
 }
 
@@ -36,29 +44,38 @@ header .container{
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    font-size: 18px;
     
 }
 
 header .container h1{
     flex: 3;
-    font-size: initial; 
+    font-size: 18px;
 }
 
-ul{
+header ul{
     list-style-type: none;
     flex: 1;
+    
 
 }
 
-li{
+header li{
     float: left;
+    padding-bottom: 1.9px;
 }
 
-li a {
+header li a {
     display: block;
     text-align: right;
     padding: 10px;
     text-decoration: none;
+    color: #6b7280;
+    
+}
+
+header li a:hover{
+    color: #5A67D8;
 }
 
 /*
@@ -67,34 +84,180 @@ li a {
 
 .overview-hero{
     grid-area: live-section;
-    background-color: chocolate;
+    background-color: #E2E8F0;
+    padding: 40px 300px;
 }
 
+.overview-hero .container{
+    display: flex;
+    flex-direction: row;
+}
 
+.overview-hero-image img{
+    width: 200px;
 
+}
 
+/*
+|||||||||||*********LEARN SECTION*********|||||||||||
+*/
 
 .learn-about{
     grid-area: learn-section;
-    background-color: brown;
+    background-color: white;
+    padding-bottom: 30px;
 }
+
+.learn-about .container h2{
+    color: #48BB78;
+    font-size: 24px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-areas: 
+    "card1" "card2" "card3"
+    ;
+
+    padding: 20px 0px;
+    column-gap: 10px;
+}
+
+.card{
+
+    border: #E2E8F0 solid;
+    border-radius: 5px;
+    box-shadow: -2px 2px 12px;
+    
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+    "image"
+    "text"
+    ;
+}
+
+.card img{
+    grid-area: image;
+    width: 300px;
+    
+}
+
+.card-body{
+    grid-area: text;
+    padding: 0px 10px;
+}
+
+
+/*
+|||||||||||*********TEST SECTION*********|||||||||||
+*/
 
 .testing{
     grid-area: test-section;
-    background-color: chartreuse;
+    background-color: #4A5568;
+    color: white;
+    padding: 50px 200px;
+
 }
+
+.testing .container{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-areas: 
+    "description" "button"
+    ;
+    
+}
+
+.testing-desciption{
+    grid-area: description;
+    padding-right: 100px;
+
+}
+
+.cta{
+    text-align: center;
+
+    padding-top: 50px;
+}
+
+.cta a{
+    text-decoration: none;
+}
+
+.btn{
+    grid-area: button;
+    text-align: center;
+    
+    background-color: green;
+    padding: 10px 15px; 
+    border-radius: 5px;
+    color: white;
+}
+
+/*
+|||||||||||*********STORIES SECTION*********|||||||||||
+*/
 
 .stories{
     grid-area: story-section;
-    background-color: cornflowerblue;
+    background-color: white;
+    
 }
+
+.stories .container{
+    padding: 50px 0px;
+}
+
+.stories .container img{
+    float: left;
+    padding-right: 20px;
+    padding-top: 10px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+}
+
+/*.stories .container a{
+    padding-left: 0px;
+}*/
+
+/*
+|||||||||||*********NEWSLETTER SECTION*********|||||||||||
+*/
 
 .newsletter{
     grid-area: news-section;
-    background-color: darkmagenta;
+    background-color: #48BB78;
+    text-align: center;
+
 }
+
+form{
+    display: flex;
+    padding-bottom: 20px;
+    padding-left: 320px;
+    gap: 3px;
+}
+
+.form-group input{
+    line-height: 33px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.newsletter .btn{
+    border-style: none;
+}
+
+/*
+|||||||||||*********WEBPAGE FOOTER*********|||||||||||
+*/
 
 footer{
     grid-area: footer;
-    background-color: deeppink;
+    background-color: #4A5568;
+    color: white;
 }
